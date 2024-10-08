@@ -1,5 +1,278 @@
+/* Colors
+ ******************************/
+/* Primary
+ ***************/
+$pale-blue: #e0e8ff;
+$bright-blue: #382AE1;
+$white: #ffffff;
+$pink-light: #766CF1;
+/* Neutral
+ ***************/
+$very-pale-blue: #f5f7ff;
+$desaturated-blue: #717FA6;
+$dark-blue: #1F2E55;
+
+/* Global Variables
+ ******************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $pale-blue;
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 194px;
+}
+
+/* Body Variables
+ ******************************/
+main {
+    padding: 71px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-card {
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-color: $white;
+
+    &__img {
+        width: 100%;
+        height: 160px;
+
+        display: flex;
+    }
+
+    &__inner {
+        padding: 32px 24px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__title {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 29px;
+
+        color: $dark-blue;
+    }
+
+    &__caption {
+        max-inline-size: 263px;
+
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        
+        text-align: center;
+
+        color: $desaturated-blue;
+    }
+
+    &__plan-container {
+        margin-top: 24px;
+        padding: 17px 16px 16px 16px;
+        border-radius: 11px;
+        width: 100%;
+        
+        background-color: $very-pale-blue;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__plan {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__plan-title {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 19px;
+
+        color: $dark-blue;
+    }
+
+    &__plan-price {
+        margin-top: 3px;
+
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+
+        color: $desaturated-blue;
+    }
+
+    &__plan-link {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 17px;
+
+        color: $bright-blue;
+    }
+
+    &__btn {
+        margin-top: 24px;
+        padding: 15px 0;
+        border: none;
+        width: 100%;
+        
+        background: $bright-blue;
+        box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+        border-radius: 11px;
+
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 20px;
+
+        color: $white;
+    }
+
+    &__cancel-btn {
+        margin-top: 24px;
+
+        border: none;
+        background-color: transparent;
+
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 20px;
+
+        color: $desaturated-blue;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+        background-size: 100%;
+    }
+
+    main {
+        padding: 102px 0 101px;
+    }
+
+    .order-card {
+        max-width: 450px;
+
+        &__img {
+            height: 220px;
+        }
+
+        &__inner {
+            padding: 45px 48px 48px;
+        }
+
+        &__text-content {
+            gap: 17px;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 37px;
+        }
+
+        &__caption {
+            max-inline-size: 354px;
+
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        &__plan-container {
+            margin-top: 20px;
+            height: 98px;
+        }
+
+
+        &__plan-title {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        
+        &__plan-price {
+            margin-top: 6px;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &__plan-link {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        &__btn {
+            margin-top: 32px;
+        }
+
+        &__cancel-btn {
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .order-card {
+        &__plan-link {
+            cursor: pointer;
+            transition: color .5s ease-out;
+
+            &:hover {
+                color: $pink-light;
+                text-decoration: none;
+            }
+        }
+
+        &__btn {
+            cursor: pointer;
+
+            transition: background-color .5s ease-out;
+            &:hover {
+                background-color: $pink-light;
+            }
+        }
+
+        &__cancel-btn {
+            cursor: pointer;
+
+            transition: color .5s ease-out;
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+    }
 }

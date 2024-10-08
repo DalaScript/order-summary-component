@@ -1,5 +1,217 @@
+/* Colors
+ ******************************/
+/* Primary
+ ***************/
+/* Neutral
+ ***************/
+/* Global Variables
+ ******************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 194px;
+}
+
+/* Body Variables
+ ******************************/
+main {
+  padding: 71px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.order-card__img {
+  width: 100%;
+  height: 160px;
+  display: flex;
+}
+.order-card__inner {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-card__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.order-card__title {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 29px;
+  color: #1F2E55;
+}
+.order-card__caption {
+  max-inline-size: 263px;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #717FA6;
+}
+.order-card__plan-container {
+  margin-top: 24px;
+  padding: 17px 16px 16px 16px;
+  border-radius: 11px;
+  width: 100%;
+  background-color: #f5f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-card__plan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.order-card__plan-title {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1F2E55;
+}
+.order-card__plan-price {
+  margin-top: 3px;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #717FA6;
+}
+.order-card__plan-link {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  color: #382AE1;
+}
+.order-card__btn {
+  margin-top: 24px;
+  padding: 15px 0;
+  border: none;
+  width: 100%;
+  background: #382AE1;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border-radius: 11px;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.order-card__cancel-btn {
+  margin-top: 24px;
+  border: none;
+  background-color: transparent;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  color: #717FA6;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-size: 100%;
+  }
+
+  main {
+    padding: 102px 0 101px;
+  }
+
+  .order-card {
+    max-width: 450px;
+  }
+  .order-card__img {
+    height: 220px;
+  }
+  .order-card__inner {
+    padding: 45px 48px 48px;
+  }
+  .order-card__text-content {
+    gap: 17px;
+  }
+  .order-card__title {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .order-card__caption {
+    max-inline-size: 354px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .order-card__plan-container {
+    margin-top: 20px;
+    height: 98px;
+  }
+  .order-card__plan-title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .order-card__plan-price {
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .order-card__plan-link {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .order-card__btn {
+    margin-top: 32px;
+  }
+  .order-card__cancel-btn {
+    margin-top: 32px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .order-card__plan-link {
+    cursor: pointer;
+    transition: color 0.5s ease-out;
+  }
+  .order-card__plan-link:hover {
+    color: #766CF1;
+    text-decoration: none;
+  }
+  .order-card__btn {
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+  }
+  .order-card__btn:hover {
+    background-color: #766CF1;
+  }
+  .order-card__cancel-btn {
+    cursor: pointer;
+    transition: color 0.5s ease-out;
+  }
+  .order-card__cancel-btn:hover {
+    color: #1F2E55;
+  }
 }
